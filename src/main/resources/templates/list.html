@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>list</title>
+    <link rel="stylesheet" href="global.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.9.0/dist/full.min.css" rel="stylesheet" type="text/css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<h1>리스트</h1>
+<div class="w-[1200px]">
+    <ul class="w-[70%]">
+        <li class="mb-[50px]" th:each="article : ${articleList}">
+            <div class="card h-[150px] card-side bg-base-100 shadow-xl">
+                <figure><img src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg" alt="Movie"/>
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title">New movie is released!</h2>
+                    <p>Click the button to watch on Jetflix app.</p>
+                </div>
+            </div>
+            <!--        <a th:href="@{|/detail?articleId=${article.id}|}" th:text="${article.title}"></a>-->
+        </li>
+    </ul>
+</div>
+<a class="btn btn-sm btn-primary" href="create">등록</a>
+</body>
+</html>
